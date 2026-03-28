@@ -1,0 +1,52 @@
+<!-- 
+  SHOPIFY EMBED INSTRUCTIONS:
+  
+  1. Go to your Shopify Admin: https://gzh-22.myshopify.com/admin
+  2. Go to Online Store → Pages → Add Page
+  3. Title: "ProfitPilot Dashboard"
+  4. Click the "<>" (HTML) button in the editor
+  5. Paste the code below
+  6. Save
+  
+  OR for full-page experience:
+  1. Go to Online Store → Themes → Edit Code
+  2. Create new template: page.profitpilot.liquid
+  3. Paste the liquid template below
+-->
+
+<!-- Option A: Embed via iframe (paste in Shopify page HTML editor) -->
+<!-- Replace YOUR_RENDER_URL with your actual Render deployment URL -->
+<div style="width:100%;height:90vh;border:none;border-radius:12px;overflow:hidden;">
+  <iframe 
+    src="YOUR_RENDER_URL" 
+    style="width:100%;height:100%;border:none;" 
+    allow="clipboard-write"
+    title="ProfitPilot Dashboard">
+  </iframe>
+</div>
+
+
+<!-- Option B: Full page Shopify Liquid template (page.profitpilot.liquid) -->
+<!--
+  Create this file at: templates/page.profitpilot.liquid
+  
+  Then assign your ProfitPilot page to use this template in Shopify Admin
+
+{% layout none %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProfitPilot — {{ shop.name }}</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    body { overflow: hidden; }
+    iframe { width: 100vw; height: 100vh; border: none; }
+  </style>
+</head>
+<body>
+  <iframe src="YOUR_RENDER_URL" allow="clipboard-write"></iframe>
+</body>
+</html>
+-->

@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: profitpilot
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: ALLOWALL
